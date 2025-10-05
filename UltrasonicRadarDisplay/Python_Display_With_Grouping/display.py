@@ -18,7 +18,7 @@ BAUD_RATE = 115200  # Match your MCU's baud rate
 maxAge = 10  # maximum number of points displayed at once
 
 # ----- Raspberry Pi Configuration ----
-ip_address = "10.29.159.245"  # Replace with the RPI IP, this will be 10.xxx.xxx.xxx
+ip_address = "10.xx.xxx.xxx"  # Replace with the RPI IP, this will be 10.xxx.xxx.xxx
 broker_port = 1883  # Default MQTT port
 topic = "esp32/sensor1"  # keep as esp32/sensor1
 replaceText = "90,100.70,200.120,900"  # this will replace what the .html file has and what the server displays

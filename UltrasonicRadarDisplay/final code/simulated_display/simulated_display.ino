@@ -7,9 +7,9 @@ String message = "";
 int cycle = 5;
 
 //------------Raspberry PI variables-------------------
- const char *MQTTssid = "sdmay25-36"; //name of the MQTT server
+ const char *MQTTssid = "xxxxxx"; //name of the MQTT server
  const char *MQTTpassword = "password"; //password for the MQTT server
- const char* mqtt_server = "10.29.183.189"; //RPi IP address, used for the MQTT server
+ const char* mqtt_server = "10.xx.xxx.xxx"; //RPi IP address, used for the MQTT server
                                   //will always be a 10. on ISU internet
                                   //
  WiFiClient wifiClient;
