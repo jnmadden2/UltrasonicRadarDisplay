@@ -1,0 +1,16 @@
+Note This folder contains 3 different MCU code options
+1. Single transmitter (just the middle transmitter fires)
+2. Normal phased array (no modulo) applying the time delays without restricting to a cycle time period (25 microseconds)
+3. Modulo phased array applying modulo to restrict time delays to be within a cycle, should be more efficent and still valid since phase delay is within to a cycle.
+
+- Both phased array setups utilize FreeRTOS for multitasking
+    -Transmitter task fires off each transmitter at the necessary times, and signals when a value can be received.
+        -Time is based on when middle transmitter is fired (or effective middle between the middle two transmitters).
+    
+    -Receiver task wait until signal should clear (in this case waiting for after near feild distance)
+        -Sends values to the Raspberry PI after a whole sweep to be used by the display
+
+-Note in our implementation setting a pin to high causes a transmitter to stop firing, and setting low makes the transmitters fire since the pins are connected to the reset pin of the 555 timers.
+
+-WIT1S and WIT1C registers are used to set and clear pins, as this is more efficent
+    -Note these registers are for pins 32+
